@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Variables</title>
+</head>
+<body>
+  <script>
+    
+// you can declare a variable with 'var', 'let', or 'const'.
+    
+    let myVar1 = 8;
+    console.log(myVar1);
+
+/* However you should only use 'let' or 'const'
+   'const' variable's value is constant & cannot be re-declared*/
+    
+    const calculation = 2 + 3;
+    console.log(calculation);
+    console.log(calculation + myVar1);
+
+    const result = calculation + myVar1;
+    console.log(result);
+    
+/* Strings can be formed using single, or double quotes ('string' or "string")
+   in general you should use single quotes, 
+   as you can put double quotes inside the string without ending the string*/
+    
+    let myString1 = '"hello ';
+    let myString2 = 'there,"';
+    console.log(myString1 + myString2);
+
+/* Concatenation, it's just a fancy word for linking things together in a series
+   thus, '"hello ' + 'there"' = '"hello there"'
+   You can concatanate many things not just strings & variables. */
+
+    myVar1 = 18;
+    console.log(myVar1);
+
+    myVar1 = myVar1 + result;
+    console.log(myVar1);
+
+    const myVar2 = 110;
+    var myVar3 = 68;
+
+    console.log(typeof myVar2);
+    console.log(typeof myString1);
+  </script>
+</body>
+</html>
