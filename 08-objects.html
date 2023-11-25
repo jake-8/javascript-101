@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Objects</title>
+</head>
+<body>
+  <script> 
+
+  // onjects make storing info easy
+  /* obj have a name with info inside {}
+     name {property: value}*/
+
+    const product = {
+      name: 'socks',
+      price: 1099
+    };
+
+// You can refrence obj props with dot notation
+    console.log(product);
+    console.log(product.name);
+    console.log(product.price);
+
+// You can change the value of a prop
+    product.name = "wool socks"
+    console.log(product.name);
+
+// If you assign a value to a new prop it adds that prop to the obj
+    product.newProperty = true;
+    console.log(product);
+
+// You can also delete objs & props
+    delete product.newProperty;
+    console.log(product.newProperty);
+
+
+//objs can be more complex
+/* The 'delivery-time' prop below has proper syntax
+   however we don't need the brackets when naming props & 
+   we can exclude the quotes as well in the name is a 
+   single word like the 'name' prop below */
+
+    const product2 = {
+      name: 'white-T',
+      ['delivery-time']: '1 day',
+      'special-offer': '10% off',
+      rating: {
+        stars: 4.5,
+        count: 96
+      },
+      fun: function myFunct() {
+        console.log('function inside object');
+      }
+    };
+//You can include objects inside objects
+// & functions as well
+
+/* If '' are needed from a prop's name 
+use braket notation to refrence the prop: */
+    console.log(product2.name);
+    console.log(product2['delivery-time']);
+    console.log(product2['special-offer']);
+
+    console.log(product2.rating.stars);
+    console.log(product2['rating']['count']);
+
+//You can use . or [] notation to call an objs function:
+    product2.fun();
+    product2['fun']();
+
+//You can turn an obj into a JSON obj
+    JSON.stringify(product2);
+
+    console.log(JSON.stringify(product2));
+    console.log(typeof JSON.stringify(product2));
+/* JSON objs are actually strings, 
+   These objs are helpful for storing objs
+   & JSON objs can be understood by other languages*/
+
+    const jsonString = JSON.stringify(product2);
+    JSON.parse(jsonString);
+//You can convert a JSON obj back into JS obj
+
+    console.log(typeof JSON.parse(jsonString));
+  
+
+
+  </script>
+</body>
+</html>
