@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Functions</title>
+</head>
+<body>
+  <script>
+
+// you can think of functions as groups of code
+// functions make code easy to reuse
+
+/* This is how you declare a function
+   function: functionName(parameters) {code} 
+   *we'll learn more about parameters later*/
+
+    function myFunction() {
+      console.log('hello');
+      console.log(6 + 2);
+    }
+
+    myFunction();
+
+/* functions don't run by themselves
+   you have to call them like this: 
+       functionName(); */
+
+
+
+
+    function calculateTax(cost, taxPercent = 0.1) {
+      console.log(cost * taxPercent);
+    }
+
+    calculateTax(2000, 0.2);
+    calculateTax(3000);
+    
+/* functions also use parameters, you can 
+   declare parameters inside the () of the 
+   function, then when you call the function
+   you can pass values for those parameters
+   */
+
+  </script>
+</body>
+</html>
