@@ -84,7 +84,69 @@ use braket notation to refrence the prop: */
 
     console.log(typeof JSON.parse(jsonString));
   
+// an object.function(); is called a method
+//javascript has bulit-in objects lets look at an example:
 
+    console.log();
+
+/* lets apply what we've learned to the code above
+ console is an example of a built-in javascript object 
+  when we type 'console.log();' we are accessing the
+  property 'log', which is a function, inside of the 'console' obj*/
+
+
+// Auto boxing
+
+    console.log('hello'.length);
+    console.log('hello'.toUpperCase());
+
+/* in the example above we created a string
+   notice that we can acces the 'length' property
+   & execute a 'toUpperCase()' method on the string
+   THIS IS BECAUSE JS TURNS STRINGS INTO OBJECTS
+   this is called auto-boxing & every string has these two properties by default
+   auto-boxing also works for numbers & booleans
+   but does not work for null or undefined */
+
+   
+// OBJECTS ARE REFRENCES
+
+    const object1 = {
+      message: 'hello'
+    };
+
+/* You might assume that when we save an obj to the value of a variable
+   that the obj's vaule is saved in the variable but this isn't the case.
+   the object is stored in memory, {everything: inside}; 
+   and the variable points to the location of the object in the memory
+  this makes javascript more efficeint.*/
+
+    const object2 = object1;
+    console.log(object2);
+
+/* if we assign object2 the value of object1  we are not assigning the same value
+   rather we are pointing the object2 var towards the same refrence for the object
+   inside the object1 var. think about it this way:
+   const object1 = reference to object location in storage
+   const object2 = object1's refrence to object location in storage 
+   THIS IS CALLED, COPY BY REFERENCE*/
+
+    object1.message = 'hi';
+    console.log(object2);
+
+// When we update onject1, object2 is updated as well
+
+    const object3 = {
+      message: 'hi'
+    };
+    console.log(object2 === object1);
+    console.log(object3 === object1);
+
+/* even though object3's object has the same property & value as object1
+   when you compare their values as equals you get false. this is because
+   even though the objects are identical their variables aren't storing 
+   the object it's self rather it's pointing to where that object is stored 
+   thus both objects are stored seprate, & their respective variables refrence them individually*/
 
   </script>
 </body>
