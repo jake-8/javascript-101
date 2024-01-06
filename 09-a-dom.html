@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM</title>
+</head>
+<body>
+  <button>hello</button>
+  <button class="button">Second button</button>
+
+
+  <script>
+//DOCUMENT OBJECT MODEL
+
+    console.log(document.title);
+    document.title = 'changed';
+    //The document obj represents/models the webpage.
+
+    console.log(document.body);
+    //The DOM combines JavaScript & HTML 
+
+/* document is one of JavaScript's built-in objects. 
+   the document object represents the page's HTML
+   this is how we can make our web page interactive*/
+   
+  /*
+    document.body.innerHTML = 'changed';
+    console.log(document.body.innerHTML);
+    document.body.innerHTML = '<button>changed</button>';
+  */
+    // every html element has a innerHTML property
+
+    console.log(document.querySelector('button'));
+    //the queryselector() method will select the first element referenced in the string
+    // in this case the first button element
+
+    document.querySelector('button')
+      .innerHTML = 'hello';
+
+    const buttonElement = document.querySelector('.button');
+    console.log(buttonElement)
+
+
+  </script>
+</body>
+</html>
