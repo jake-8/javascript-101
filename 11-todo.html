@@ -6,16 +6,25 @@
   <title>Todo list</title>
   <link rel="stylesheet" href="./styles/11-todo-list.css">
 </head>
+
 <body>
-  <p>Todo list</p>
-  <div name="container" class="grid">
-    <input type="text" class="js-text-input" placeholder="add task">
-    <input type="date" class="js-date-input">
-    <button class="js-button" onclick="
-      addTask();
-    ">Add</button> 
-</div>
-<div class="js-list grid">
+  <div class="container">
+
+    <h1 id="title">Todo list</h1>
+
+    <div id="input-container">
+      <input type="text" class="js-text-input" placeholder="add task">
+      <input type="date" class="js-date-input">
+      <button id="submit-button" class="js-button" onclick="
+        addTask();
+      ">Add</button> 
+  </div>
+
+  <div class="js-list grid">
+
+    <!-- JavaScript Input -->
+
+  </div>
 
 </div>
   <script src="./scripts/11-todo-list.js">
