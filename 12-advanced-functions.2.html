@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Functions</title>
+</head>
+<body>
+  <button
+    class="js-button"
+    onclick="
+
+    ">Click</button>
+
+  <script>
+// Event listeners
+
+    const buttonElement = document
+      .querySelector('.js-button');
+
+    const eventListener = () => {
+      console.log('click');
+    }
+  
+    buttonElement.addEventListener('click',
+      eventListener);
+    //This event listener does the same as the HTML onclick
+
+    buttonElement.removeEventListener('click', 
+      eventListener);
+    //you can use removeEventListener property to remove a specific event & function
+
+    buttonElement.addEventListener('click', () => {
+      console.log('click2');
+    })
+    // you can add multiple listeners to one event
+    //Best practice to use addEventListener instead of onclick
+
+    buttonElement.addEventListener('keydown', event => {
+      if(event.key === 'c') {
+        console.log('keydown');
+      }
+    })
+
+//Array Methods
+
+// .filter() 
+
+    const myArr = [3, -8, 12, -1, -3, 18, 5, 7];
+
+    [1, 2, 3].filter((value, index) => {
+      //the filter method is similar to the forEach as we can use both to loop through an array & the syntax is similar
+      /*the filter method is different though: 
+          -it creates a new array
+          -if the inner function returns 'true' the value is added to the new array
+          -if the return value is 'false' the value is not put into the new array
+      */
+    });
+
+    myArr.filter((value) => {
+    /*
+      if (value >= 0) {
+        return true;
+      } else {
+        return false
+      }
+   */
+      return value < 0;
+    });
+    //in this example we use the .filter() method to remove all the negative numbers from the myArr array
+
+    console.log(myArr.filter((value) => {
+      return value < 0;
+    }));
+    //if you console log the result you will see the negative number are in the new array
+
+// .map() 
+// transforms an array into another array based on the return value
+
+    [1, 2, 4].map((value, index) => {
+      //creates a new array 
+      //loops through the array & runs the function like the forEach() method does
+      //whatever we return is added to the new array
+    })
+
+    const myArr2 = [1, 1, 3, 5, 6];
+
+    console.log(myArr2.map((value) => {
+      return value * 2;
+    }))
+    //In this example we use the .map() method to double each number & add it to the new function
+
+    myArr2.map(value => value * 2)
+
+/* closure 
+  -If a function has access to a value
+  -It will always have access to that value
+  -the value is packaged with or encloused in the function
+*/
+  </script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Functions</title>
+</head>
+<body>
+  <script>    
+    const function1 = function greeting() {
+      console.log('hello');
+    }
+
+    console.log(typeof function1)
+  /* Functions are values & can be saved in a variable
+    you can't call this type of function before you declare it */
+    //function2(); 
+
+// Anonymous Functions
+
+  const function2 = function() {
+    console.log('Anonymous Function');
+  }
+//This is a shortcut when asigning functions to variables
+
+  const object1 = {
+    num: 2,
+    fun: function() {
+      console.log('hello world?');
+    } 
+  }
+  //when asigning the fuction as a value we don't have to name the function
+
+  object1.fun();
+//in this example the fuction is called using dot notation 
+//this shortcut can be used anytime you can call the function without naming it
+
+  function display(param) {
+    console.log(param);
+  }
+
+    display(2);
+  //you can pass values through a function.
+
+  function run(param) {
+    param();
+  }
+
+  run(function myFun() {
+    console.log('hello4')
+  });
+  //functions are values so you can pass a functuon through a function too
+
+  </script>
+
+  <script>
+// Asynchronous Code
+// W0N'T WAIT for a line to finish before going to the next line
+
+    console.clear()
+
+    let timeOutVar;
+
+    setTimeout(function() {
+      timeOutVar = 'time out'
+      //console.log(timeOutVar);
+    }, 1000)
+
+   /*
+   setTimeout accepts to parameters, a function & the amount of time before the function is called
+   setTimeout(function(), nums in milliseconds) 
+   */
+
+    console.log('next line');
+    //the setTimeout function will set the timer then skip to the next line
+    //lets our code do other things while waiting on the time to run out
+
+    setInterval(function() {
+      //console.log('interval')
+    })
+  
+    console.log('next line 2')
+  </script>
+  <script>
+// Looping with forEach method
+
+    let myArr = [
+      'eat',
+      'sleep',
+      'work',
+      'code'
+    ]
+
+    myArr.forEach(function(value, index) {
+      if(value === 'sleep') {
+        return;
+      }
+      //return the value to skip it
+      //the same as using continue in a for() loop
+      console.log(value)
+      console.log(index);
+    })
+    //there is no break function in a forEach() loop
+    //use for() loop if break is needed
+
+//Arrow Functions 
+
+    console.clear();
+
+    const arrowFunction = () => {
+      console.log('arrow');
+      return 3 + 2;
+    }
+    //the arrow function does everthing a regular function does. it is shorter & easier to read.
+
+    arrowFunction();
+
+//Arrow function short-cuts
+
+    const oneParam = param => {
+      console.log(param + 1);
+    }
+    //if the arrow function only has one parameter the () are optional
+
+    oneParam(2);
+
+
+    const onLine = () =>  2 + 3;
+    //if the arrow function has only one line the {} are optional
+    //the function will return the value to the right of the arrow if no other code is avalible 
+
+    object2 = {
+      method: () => {
+        //this is how we would apply an arrow function to the value of an object's method property
+      }, 
+
+      method() {
+        //This shorthand can be used to assign a method to an object
+      } 
+
+    }
+  </script>
+  
+</body>
+</html>
