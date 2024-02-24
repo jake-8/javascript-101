@@ -4,7 +4,9 @@ This repository is documentation of my person notes relating to a JavaScript cou
 - my notes are not direct copies of the related lesson & therefore, are not definite guides to the related lessons 
 
 <br>
-WANT TO FOLLOW THE COURSE? -> SOURCE: https://www.youtube.com/watch?v=SBmSRK3feww - SuperSimpleDev on youtube
+WANT TO FOLLOW THE COURSE?:
+
+- SOURCE: https://www.youtube.com/watch?v=SBmSRK3feww - SuperSimpleDev on youtube
 
 - SuperSimpleDev Website -> Https://www.supersimple.dev
 
